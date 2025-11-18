@@ -162,3 +162,7 @@ FROM animals;
 
 SELECT SUM(totalamount) AS TotalSales
 FROM invoices;
+
+SELECT COUNT(*) AS total_appointments
+FROM appointments
+WHERE ownerid = 8;
