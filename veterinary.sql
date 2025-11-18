@@ -166,3 +166,10 @@ FROM invoices;
 SELECT COUNT(*) AS total_appointments
 FROM appointments
 WHERE ownerid = 8;
+
+SELECT a.name, COUNT(ap.appointid) AS most_appointments
+FROM animals a
+    JOIN appointments ap ON a.animalid = ap.animalid
+GROUP BY a.name
+ORDER BY most_appointments DESC
+LIMIT 1;
