@@ -23,7 +23,8 @@ CREATE TABLE animals
     FOREIGN KEY (ownerid) REFERENCES owners(ownerid)
 );
 
-CREATE TABLE appointments (
+CREATE TABLE appointments
+(
     appointid INT PRIMARY KEY,
     animalid INT,
     appointdate DATE,
@@ -31,3 +32,12 @@ CREATE TABLE appointments (
     FOREIGN KEY (animalid) REFERENCES animals(animalid)
 );
 
+CREATE TABLE doctors
+(
+    doctorid INT PRIMARY KEY,
+    dfirstname VARCHAR(50),
+    dlastname VARCHAR(50),
+    specialty VARCHAR(100),
+    phone VARCHAR(15),
+    email VARCHAR(100)
+);
