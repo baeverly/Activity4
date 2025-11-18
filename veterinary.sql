@@ -23,7 +23,8 @@ CREATE TABLE animals
     FOREIGN KEY (ownerid) REFERENCES owners(ownerid)
 );
 
-CREATE TABLE appointments (
+CREATE TABLE appointments
+(
     appointid INT PRIMARY KEY,
     animalid INT,
     appointdate DATE,
@@ -47,5 +48,18 @@ CREATE TABLE invoices
     appointid INT,
     totalamount NUMERIC(10,2),
     paymentdate TIME,
-    FOREIGN (appointid) REFERENCES appointments(appointid)
+    FOREIGN KEY (appointid) REFERENCES appointments(appointid)
+);
+
+CREATE TABLE medicalrecords
+(
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    recorddate TIMESTAMP,
+    doctorid INT,
+    diagnosis TEXT,
+    prescription TEXT,
+    notes TEXT,
+    FOREIGN KEY (animalid) references animals(animalid),
+    FOREIGN KEY (doctorid) references doctors(doctorid)
 );
