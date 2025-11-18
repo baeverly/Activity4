@@ -92,4 +92,15 @@ VALUES
     (19, 'Blaze', 'Horse', 'Arabian', '2017-05-25', 'Male', 'Bay', 9),
     (20, 'Ollie', 'Dog', 'Pug', '2020-12-01', 'Female', 'Fawn', 10);
 
-        
+INSERT INTO appointments (appointid, animalid, appointdate, reason)
+VALUES
+(1, 21, '2026-01-10', 'Annual Checkup'),
+(2, 22, '2026-01-11', 'Vaccination Booster'),
+(3, 23, '2026-01-12', 'Neutering Consultation'),
+(4, 24, '2026-01-13', 'Skin Irritation Treatment'),
+(5, 25, '2026-01-14', 'Ear Cleaning'),
+(6, 26, '2026-01-15', 'Surgery Follow-up'),
+(7, 27, '2026-01-16', 'Eye Checkup'),
+(8, 28, '2026-01-17', 'Ultrasound'),
+(9, 29, '2026-01-18', 'Allergy Testing'),
+(10, 30, '2026-01-19', 'General Health Assessment');
